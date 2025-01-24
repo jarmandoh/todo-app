@@ -1,0 +1,10 @@
+<form [formGroup]="taskForm" (ngSubmit)="onSubmit()">
+    <h3>Agregar Tarea</h3>
+    <mat-form-field>
+      <input matInput placeholder="Task title" formControlName="title">
+    </mat-form-field>
+    <mat-form-field>
+      <textarea matInput placeholder="Task description" formControlName="description"></textarea>
+    </mat-form-field>
+    <button mat-raised-button color="primary" type="submit" [disabled]="!taskForm.valid">Add Task</button>
+</form>

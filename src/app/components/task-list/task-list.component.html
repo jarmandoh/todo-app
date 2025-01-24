@@ -1,0 +1,13 @@
+<mat-list>
+    @for (task of tasks; track $index) {
+        <mat-list-item>    
+            <app-task-item [task]="task" (delete)="deleteTask($event)" (toggle)="toggleComplete($event)"></app-task-item>
+        </mat-list-item>
+    } @empty {
+        <mat-list-item>
+            <p>No tasks found</p>
+        </mat-list-item>
+    }
+    
+  </mat-list>
+  <app-task-form (taskAdded)="loadTasks()"></app-task-form>

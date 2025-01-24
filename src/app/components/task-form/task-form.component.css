@@ -1,0 +1,14 @@
+form{
+    margin-top: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    background-color: cadetblue;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+h3{
+    text-align: center;
+    margin-bottom: 50px;
+}
