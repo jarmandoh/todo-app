@@ -1,4 +1,10 @@
-<p>task-detail works!</p>
-{{
-    task | json
-}}
+<div class="task-detail">
+    <h2>{{task.title}}</h2>
+    <p>{{task.description}}</p>
+    <p>Completada: {{task.completed}}</p>
+    <div class="actions">
+        <button mat-raised-button color="primary" (click)="onToggle()">Toggle</button>
+        <button mat-raised-button color="warn" (click)="onDelete()">Delete</button>
+        <button mat-raised-button color="accent" (click)="onEdit()">Edit</button>
+    </div>
+</div>
