@@ -29,7 +29,7 @@ export class TaskListComponent {
         "id": 2,
         "title": "Build a Todo App",
         "description": "Create a simple Todo application using Angular",
-        "completed": false
+        "completed": true
       }
     
   ];

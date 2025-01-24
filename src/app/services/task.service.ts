@@ -9,6 +9,20 @@ import { HttpClient } from '@angular/common/http';
 })
 export class TaskService {
   private apiUrl = 'http://localhost:3000/tasks';
+  tasks: Task[] = [
+    {
+      "id": 1,
+      "title": "Learn Angular",
+      "description": "Study Angular fundamentals",
+      "completed": false
+    },
+    {
+      "id": 2,
+      "title": "Build a Todo App",
+      "description": "Create a simple Todo application using Angular",
+      "completed": true
+    }
+  ]
 
   constructor(private http: HttpClient) { }
 

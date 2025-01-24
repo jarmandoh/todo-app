@@ -1,7 +1,7 @@
-<div class="task-item" [class.completed]="task.completed">
-  <mat-checkbox [checked]="task.completed" (change)="onToggle()">
-    {{ task.title }}
-  </mat-checkbox>
+<div class="task-item" [class.completed]="task.completed" routerLink="/task/{{ task.id }}">
+  {{ task.title }}
+  <!-- <mat-checkbox [checked]="task.completed" (change)="onToggle()">
+  </mat-checkbox> -->
   <button mat-icon-button (click)="onDelete()">
     <mat-icon>delete</mat-icon>
   </button>
