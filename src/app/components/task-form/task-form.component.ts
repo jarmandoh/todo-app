@@ -34,9 +34,13 @@ export class TaskFormComponent {
   onSubmit(): void {
     if (this.taskForm.valid) {
       const newTask = {
+        id: this.taskService.tasks.length + 1,
         ...this.taskForm.value,
         completed: false
       };
+      this.taskAdded.emit();
+      this.taskForm.reset();
+
       this.taskService.addTask(newTask).subscribe(
         () => {
           this.taskAdded.emit();

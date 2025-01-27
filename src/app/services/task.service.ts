@@ -35,6 +35,7 @@ export class TaskService {
   }
 
   addTask(task: Task): Observable<Task> {
+    this.tasks.push(task);
     return this.http.post<Task>(this.apiUrl, task);
   }
 
@@ -47,3 +48,5 @@ export class TaskService {
   }
 
 }
+
+

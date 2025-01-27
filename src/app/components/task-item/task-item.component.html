@@ -1,5 +1,9 @@
 <div class="task-item" [class.completed]="task.completed" routerLink="/task/{{ task.id }}">
-  {{ task.title }}
+  <span class="task-title">{{ task.title }}</span>
+  @if (task.completed) {
+    <mat-icon>checked</mat-icon>
+  }
+
   <!-- <mat-checkbox [checked]="task.completed" (change)="onToggle()">
   </mat-checkbox> -->
   <!-- <button mat-icon-button (click)="onDelete()">

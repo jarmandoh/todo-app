@@ -17,22 +17,7 @@ import { TaskFormComponent } from '../task-form/task-form.component';
   standalone: true
 })
 export class TaskListComponent {
-  tasks: Task[] = [
-
-      {
-        "id": 1,
-        "title": "Learn Angular",
-        "description": "Study Angular fundamentals",
-        "completed": false
-      },
-      {
-        "id": 2,
-        "title": "Build a Todo App",
-        "description": "Create a simple Todo application using Angular",
-        "completed": true
-      }
-    
-  ];
+  tasks: Task[] = [];
 
   constructor(private taskService: TaskService) { }
 
@@ -41,7 +26,7 @@ export class TaskListComponent {
   }
 
   loadTasks(): void {
-    this.tasks = this.tasks;
+    this.tasks = this.taskService.tasks;
     /* this.taskService.getTasks().subscribe(
       tasks => this.tasks = tasks
     ); */

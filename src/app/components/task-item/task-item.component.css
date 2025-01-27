@@ -4,9 +4,12 @@
     justify-content: space-between;
     align-items: center;
     padding: 10px;
-    background-color: darkorange;
+    background-color: gray;
     margin-bottom: 20px;
     cursor: pointer;
+}
+.task-item:hover{
+    background-color: #ff8c00;
 }
 .completed{
     background-color: green;

@@ -50,7 +50,6 @@ body {
   
   /* Estilos para tareas completadas */
   .completed {
-    text-decoration: line-through;
     color: #a0a0a0; /* Texto gris para tareas completadas */
   }
   
