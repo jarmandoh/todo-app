@@ -1,6 +1,6 @@
-<mat-list>
+<mat-list class="task-list">
     @for (task of tasks; track $index) {
-        <mat-list-item>    
+        <mat-list-item >    
             <app-task-item [task]="task" (delete)="deleteTask($event)" (toggle)="toggleComplete($event)"></app-task-item>
         </mat-list-item>
     } @empty {
@@ -11,3 +11,6 @@
     
   </mat-list>
   <app-task-form (taskAdded)="loadTasks()"></app-task-form>
+
+
+  

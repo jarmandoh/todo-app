@@ -1,4 +1,121 @@
 /* You can add global styles to this file, and also import other style files */
+/* Estilos globales */
+body {
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    background-color: #cacaca; /* Fondo negro */
+    color: #ffffff; /* Texto blanco */
+  }
+  
+  .container {
+    padding: 16px;
+  }
+  
+  /* Estilos para la lista de tareas */
+  .task-list {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 16px;
+    background-color: #18181b; /* Fondo gris oscuro */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Estilos para cada tarea */
+  .task-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 8px;
+    margin-bottom: 8px;
+    background-color: #1f1f23; /* Fondo gris claro */
+    border-radius: 4px;
+    transition: background-color 0.3s;
+  }
+  
+  .task-item:hover {
+    background-color: #2a2a2e; /* Fondo gris más claro al pasar el mouse */
+  }
+  
+  .task-title {
+    flex-grow: 1;
+    margin-left: 8px;
+    color: #ffffff; /* Texto blanco */
+  }
+  
+  .task-actions {
+    display: flex;
+    gap: 8px;
+  }
+  
+  /* Estilos para tareas completadas */
+  .completed {
+    text-decoration: line-through;
+    color: #a0a0a0; /* Texto gris para tareas completadas */
+  }
+  
+  /* Estilos para el input de texto */
+  input[type="text"] {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 16px;
+    border: 1px solid #9146ff; /* Borde morado */
+    border-radius: 4px;
+    background-color: #1f1f23; /* Fondo gris claro */
+    color: #ffffff; /* Texto blanco */
+  }
+  
+  input[type="text"]:focus {
+    outline: none;
+    border-color: #bf94ff; /* Borde morado más claro al enfocar */
+  }
+  
+  /* Estilos para los botones */
+  button {
+    padding: 8px 16px;
+    border: none;
+    border-radius: 4px;
+    background-color: #9146ff; /* Fondo morado */
+    color: #ffffff; /* Texto blanco */
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  button:hover {
+    background-color: #bf94ff; /* Fondo morado más claro al pasar el mouse */
+  }
+  
+  button:disabled {
+    background-color: #3a3a3d; /* Fondo gris para botones deshabilitados */
+    cursor: not-allowed;
+  }
 
 html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+
+/* Estilos para pantallas pequeñas (móviles) */
+@media (max-width: 768px) {
+    .task-list {
+      padding: 8px;
+    }
+  
+    .task-item {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  
+    .task-actions {
+      width: 100%;
+      justify-content: flex-end;
+      margin-top: 8px;
+    }
+  
+    input[type="text"] {
+      margin-bottom: 8px;
+    }
+  
+    button {
+      width: 100%;
+      margin-bottom: 8px;
+    }
+  }
